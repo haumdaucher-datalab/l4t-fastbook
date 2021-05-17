@@ -4,5 +4,4 @@ ARG TARGETARCH
 
 RUN pip3 install --upgrade pip && \
     python3 -m pip install fastai && \
-    python3 -m pip install fastbook && \
-    python3 -c 'import fastbook; fastbook.setup_book()'
+    python3 -m pip install fastbook

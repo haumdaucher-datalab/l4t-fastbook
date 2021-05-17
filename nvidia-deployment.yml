@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nvidia
+  name: nvidia
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nvidia
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nvidia
+    spec:
+      containers:
+      - #image: nvcr.io/nvidia/l4t-pytorch:r32.5.0-pth1.7-py3
+        image: nvcr.io/nvidia/l4t-ml:r32.5.0-py3
+        name: l4t-pytorch
+        resources: {}
+        command:
+        - "/bin/sleep"
+        args:
+        - "9999"
+      tolerations:
+      - effect: NoSchedule
+        key: nvidia.com/gpu
+      nodeSelector:
+        nvidia.com/gpu: "true"
+status: {}

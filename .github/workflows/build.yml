@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: iptizer/swiss:latest
+          tags: haumdaucherdatalab/l4t-fastbook:latest
           platforms: linux/arm64
 
       - name: Image digest

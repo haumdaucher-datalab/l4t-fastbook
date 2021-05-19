@@ -20,7 +20,8 @@ spec:
     spec:
       containers:
       - #image: nvcr.io/nvidia/l4t-pytorch:r32.5.0-pth1.7-py3
-        image: nvcr.io/nvidia/l4t-ml:r32.5.0-py3
+        #image: nvcr.io/nvidia/l4t-ml:r32.5.0-py3
+        image: haumdaucherdatalab/l4t-fastbook:latest
         name: l4t-pytorch
         resources: {}
         command:
